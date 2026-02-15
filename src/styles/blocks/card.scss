@@ -11,22 +11,28 @@ p {
 }
 
 .card {
+  border: 1px solid #f3f3f3;
   box-sizing: border-box;
   width: $card-width;
   height: 408px;
-  padding-inline: 18px;
+  max-height: 408px;
   font-family: $font-main;
   display: flex;
   flex-direction: column;
 
   &__image {
+    display: block;
+    margin-inline: 19px;
     width: 160px;
     height: 134px;
-    margin-top: 33px;
+    margin-top: 32px;
+    object-fit: fill;
+    object-position: top;
+    flex-shrink: 0;
   }
 
   &__title {
-    margin: 40px 0 4px;
+    margin: 40px 16px 4px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -34,27 +40,30 @@ p {
   }
 
   &__code {
-    margin: 0;
+    margin-inline: 16px;
     font-size: 10px;
     line-height: 14px;
     color: $color-text-muted;
   }
 
   &__review {
+    margin-right: 16px;
+    margin-left: 16px;
     height: 16px;
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__reviews {
-    line-height: 14px;
+    margin-top: 2px;
+    line-height: 16px;
     font-size: 10px;
     color: $color-text-main;
   }
 
   &__price {
+    margin-inline: 16px;
     margin-top: 23px;
     display: flex;
     justify-content: space-between;
@@ -73,6 +82,9 @@ p {
   }
 
   &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 16px auto 0;
     text-transform: uppercase;
     box-sizing: border-box;
@@ -80,22 +92,21 @@ p {
     height: 40px;
     border-radius: 5px;
     background-color: $color-primary;
-    border: 1px solid transparent;
     color: #fff;
     font-weight: 700;
     font-size: 14px;
     line-height: 40px;
     margin-bottom: 16px;
-    text-align: center;
+    border: 1px solid $color-primary;
     cursor: pointer;
 
     &:hover {
       background-color: #fff;
       color: $color-primary;
-      border-color: $color-primary;
       font-weight: 700;
       font-size: 14px;
       line-height: 40px;
+      border: 1px solid $color-primary;
     }
   }
 }

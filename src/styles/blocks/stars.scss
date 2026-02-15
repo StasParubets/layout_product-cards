@@ -1,12 +1,15 @@
 .stars {
   display: flex;
   gap: 8px;
+  height: 16px;
+  align-items: center;
 
   &__star {
     width: $star-size;
     height: $star-size;
     background-image: url(../images/star.svg);
     background-size: cover;
+    background-position: center;
   }
 
   &--1 &__star:nth-child(-n + 1),
